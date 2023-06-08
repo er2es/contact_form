@@ -7,4 +7,5 @@ composer install <br />
 npm install <br />
 npm run build <br />
 php bin/console doctrine:migrations:migrate (dont forget to add database variables to .env file) <br />
+php bin/console doctrine:fixtures:load (optional: some fixture data)
 symfony server:start (symfony.exe included)
