@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
+.unstyled ul {
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group .req-asterisk:after {
+    content:" *";color:red;
+  }

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<div class="container mt-3">
+    <div class="d-flex align-items-center justify-content-center vh-75">
+
+        <div class="bg-white p-2 contact-form w-50">
+            <div class="form-group mt-2 required">
+            {{ form_start(develery_form) }}
+                {{ form_row(develery_form.name, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group mt-2">
+                {{ form_row(develery_form.email, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group mt-2">
+                {{ form_row(develery_form.message, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div class="form-group mt-2">
+            <div class="col-md-12 text-center">
+                 <input type="submit" value="Küldés" class="align-items-center justify-content-center btn btn-primary py-2 px-2">
+            </div>
+              
+            </div>
+            {{ form_end(develery_form) }}
+
+            {% if develery_form.vars.errors is not empty %}
+            <div class="alert alert-danger mt-1 pb-0 unstyled">
+                {{ form_errors(develery_form) }}
+            </div>
+            {% endif %}
+
+            {% for notice in app.flashes('success') %}
+             <div class="alert alert-success mt-2 pb-1 pt-1 text-center fw-medium">
+               {{ notice }}
+            </div>
+            {% endfor %}
+
+
+        </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
