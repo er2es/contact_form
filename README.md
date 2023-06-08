@@ -1,10 +1,10 @@
-symfony 6.3 (current last stable version) + bs5 simple contact form with webpack encore
+symfony 6.3 (current last stable version) + bs5 simple contact form with webpack encore<br /><br />
 
-php: 8.1
+php: 8.1 <br /><br />
 
-install:
-composer install
-npm install
-npm run build
-php bin/console doctrine:migrations:migrate (dont forget to add database variables to .env file)
+install: <br />
+composer install <br />
+npm install <br />
+npm run build <br />
+php bin/console doctrine:migrations:migrate (dont forget to add database variables to .env file) <br />
 symfony server:start (symfony.exe included)
